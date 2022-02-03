@@ -1,0 +1,6 @@
+<ng-container *ngIf="article != undefined && article != null">
+    <hr>
+    <h2>{{ article.title }}</h2>
+    <img src="{{ article.image }}" style="max-width: 400px;">
+    <p>{{ article.description }}</p>
+</ng-container>

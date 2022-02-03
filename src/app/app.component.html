@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="search" />
+<h2>{{ search }}</h2>
+<button (click)="getNews()" [disabled]="search.length == 0">Get News</button>
+
+<ng-container *ngIf="articles.length > 0">
+    <ng-container *ngFor="let article of articles">
+        <news-item [article]="article"></news-item>
+    </ng-container>
+</ng-container>
